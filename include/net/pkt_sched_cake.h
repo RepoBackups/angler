@@ -863,6 +863,7 @@ enum {
 	TCA_CAKE_TARGET,
 	TCA_CAKE_AUTORATE,
 	TCA_CAKE_MEMORY,
+	TCA_CAKE_WASH,
 	__TCA_CAKE_MAX
 };
 #define TCA_CAKE_MAX	(__TCA_CAKE_MAX - 1)
@@ -902,3 +903,4 @@ struct tc_cake_xstats {
 };
 
 #endif
+
