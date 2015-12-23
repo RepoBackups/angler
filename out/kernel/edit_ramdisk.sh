@@ -25,6 +25,22 @@ if  grep -qr verify=/dev/block/platform/msm_sdcc.1/by-name/metadata /tmp/ramdisk
 fi
 rm /tmp/ramdisk/verity_key
 
+ui_print "Install ukm...";
+rm -rf /data/UKM/*;
+rm -rf /system/etc/init.d/UKM;
+rm -rf /system/xbin/uci;
+rm -rf /system/addon.d/UKM.sh;
+cp -f /tmp/data/* /data;
+mkdir /system/addon.d;
+set_perm_recursive 0 0 0755 0755 /system/addon.d;
+cp -f /tmp/data/UKM/uci /system/xbin/uci;
+cp -f /tmp/data/UKM/UKM /system/etc/init.d/UKM;
+cp -f /tmp/data/UKM/UKM.sh /system/addon.d/UKM.sh;
+set_perm_recursive 0 0 0755 0755 /data/UKM;
+set_perm_recursive 0 0 0755 0755 /system/xbin/uci;
+set_perm_recursive 0 0 0755 0755 /system/etc/init.d/UKM;
+set_perm_recursive 0 0 0755 0755 /system/addon.d/UKM.sh;
+
 rm /tmp/ramdisk/boot.img-ramdisk.gz
 rm /tmp/boot.img-ramdisk.gz
 cd /tmp/ramdisk/
