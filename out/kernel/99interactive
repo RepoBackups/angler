@@ -29,7 +29,7 @@ if [ $A57GOV = "interactive" ]; then
 	echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_sched_load
 	echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_migration_notif
 	echo 10000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
-	echo 90 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
+	echo 95 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
 	echo 10000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
 	echo 1958000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
 	echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy
